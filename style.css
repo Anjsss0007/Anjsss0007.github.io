@@ -1,0 +1,325 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo1 {
+  position: absolute;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: -30px;
+  color: red;
+}
+
+.logo2 {
+  position: absolute;
+  top: 19px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #ffa500;
+}
+.search-container {
+  position: absolute;
+  width: 250px;
+  margin: 1px auto;
+  z-index: 2;
+  top: 10px;
+  right: 100px;
+}
+
+.search-container:focus-within {
+  width: 340px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  background-image: url('cari.png');
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.0s;
+}
+
+.search-results {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  padding: 20px;
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 3;
+  left: -120%; /* nilai awal */
+}
+
+.search-results.show {
+  left: 5px;
+}
+
+@media (max-width: 500px) {
+  .search-container {
+    width: 40%;
+  }
+}
+
+.tombol-logo {
+  position: absolute;
+  color: red;
+  left: 10px;
+  top: 55px;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 90px;
+  top: 55px;
+}
+
+.bar1 {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.bar2 {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.bar3 {
+  width: 70%;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  width: 100%; /* Ubah dari 110% menjadi 100% */
+  position: absolute;
+  top: 80px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+  left: 0; /* Tambahkan properti left dengan nilai 0 */
+}
+  
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 40px;
+  
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+.sidebar {
+  position: fixed;
+  top: 40px;
+  left: -300px;
+  width: 210px;
+  background-color: white;
+  height: 100vh;
+  padding: 10px;
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-top: 30px;
+  
+}
+
+.sidebar a {
+  
+  text-decoration: none;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFFFFF; /* Ubah warna latar belakang */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  z-index: 1; /* Prioritas tampilan */
+  padding: 40px; /* Jarak dalam header */
+}
+
+.container1 {
+  margin-top: 130px;
+  padding: 10px;
+  background-color: #F7F7F7;
+}
+
+.recent_post {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent_post ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent_post li {
+  margin-bottom: 20px;
+}
+
+.recent_post img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: -5px;
+}
+
+.recent_post h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.recent_post .date {
+  font-size: 14px;
+  color: #666;
+}
+
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.album-post {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.album-post img {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+  border-radius: 10px 10px 0 0;
+}
+
+.album-info {
+  padding: 10px;
+}
+
+.album-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.album-info .date {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-col {
+  flex-basis: 25%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: green;
+  text-decoration: none;
+  
+}
+
+.footer-bottom {
+  background-color: black;
+  color: green;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px;
+  
+}
